@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button onclick="buscarDados()" >OK</button>
+    <script>
+        function buscarDados(){
+            fetch('https://pokeapi.co/api/v2/pokemon')
+            .then(function(response){
+                return response.json()
+            })
+            .then(function (pokemon) {
+                console.log(pokemon)
+            }) 
+        }
+    </script>
+
+</body>
+</html>

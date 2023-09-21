@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <title>Document</title>
+    </head>
+    <body>
+        
+        <input type="text" onkeypress="apertoutecla(event)" id="entrada">
+        <button id="botao" onclick="clicar()">OK</button>
+        
+        
+
+        <div id="box1" onmouseleave="diminuirDiv()" 
+            onmouseenter="aumentarDiv()" 
+            style="height: 50px; width: 50px; 
+            background-color: rgb(244, 5, 192); margin-top: 20px;">
+        </div>
+        <div id="box2" onmouseenter="mudarCor()"
+            onmouseout="voltarCor()" style="height: 50px; width: 50px; 
+            background-color: rgb(9, 241, 233); margin-top: 20px;"></div>
+        <script>
+            function mudarCor(){
+                let caixa = document.getElementById('box2')
+                caixa.style.backgroundColor = 'purple'
+                caixa.style.height = '60px'
+                caixa.style.width = '60px'
+            }
+            function voltarCor(){
+                let caixa = document.getElementById('box2')
+                caixa.style.backgroundColor = 'blue'
+                caixa.style.height = '50px'
+                caixa.style.width = '50px'  
+            }
+
+            function aumentarDiv(){
+                let caixa = document.getElementById('box1')
+                caixa.style.height = '60px'
+                caixa.style.width = '60px'
+            }
+            function diminuirDiv(){
+                let caixa = document.getElementById('box1')
+                caixa.style.height = '50px'
+                caixa.style.width = '50px'
+            }
+            function clicar(){
+                alert('TESTE')
+            }
+
+            function apertoutecla(event){
+                console.log(event.key)
+                if (event.key == 'j')
+                    alert('Exemplo prof. josino')
+            }
+
+            
+
+            
+        </script>
+    </body>
+    </html>
